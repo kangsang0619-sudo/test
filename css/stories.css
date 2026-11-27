@@ -1,0 +1,5 @@
+/* 우리의 이야기 화면 전용 CSS: 아래에 개별 스타일을 추가하세요. */
+.page-stories .hero {
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,22 @@
+/* 공통 디자인: 색상, 여백, 글꼴을 여기서 수정하세요. */
+:root { --bg:#fcf5ef; --ink:#40271d; --accent:#bf790b; --line:#e7cfbd; }
+* { box-sizing:border-box; }
+body { margin:0; background:#eee5db; color:var(--ink); font-family:system-ui,"Malgun Gothic",sans-serif; font-size:15px; line-height:1.55; }
+.app { width:100%; max-width:480px; min-height:100dvh; margin:auto; background:var(--bg); display:flex; flex-direction:column; }
+header { padding:12px 16px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; }
+.logo { font-size:26px; font-weight:800; text-decoration:none; color:var(--ink); } .logo span { color:var(--accent); }
+main { padding:12px; flex:1; min-width:0; }
+h1 { font-size:21px; margin:4px 0 14px; } h2 { font-size:19px; margin:0 0 10px; } h3 { font-size:16px; margin:8px 0; } p { margin:8px 0; }
+.card { border:1px solid var(--line); background:#fffaf4; border-radius:18px; padding:14px; margin:12px 0; box-shadow:0 2px 5px #5734140b; overflow:hidden; }
+/* 이미지 교체: src만 바꾸면 지정 영역에 맞춰 자동 크기 조절됩니다. */
+img { display:block; max-width:100%; object-fit:cover; object-position:center; border-radius:12px; }
+.hero { width:100%; aspect-ratio: 2.4/1; } .photo { width:100%; aspect-ratio:1.5; } .small { width:100px; aspect-ratio:1; float:right; margin:0 0 8px 8px; } .thumb { width:34%; aspect-ratio:1; float:left; margin:0 12px 8px 0; }
+.photos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+button,input,textarea { font:inherit; color:inherit; } button { cursor:pointer; } .btn,.outline { display:block; clear:both; text-align:center; text-decoration:none; border-radius:12px; padding:10px; margin:9px 0; font-weight:700; } .btn { background:linear-gradient(110deg,#e99a30,#bf790b); color:white; } .outline { border:1px solid var(--line); color:var(--ink); }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; } .choice { flex:1; border:1px solid var(--line); background:#fffaf4; border-radius:20px; padding:7px; } .choice.active { outline:2px solid var(--accent); background:#fcebd2; }
+.moods { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; } .mood { background:var(--mood); border-radius:14px; font-size:13px; } .mood span { display:block; font-size:30px; }
+.week,.calendar { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); text-align:center; gap:3px; } .week span { font-size:24px; } .day { border-radius:5px; padding:4px 0; } .day small { display:block; color:#b28acb; min-height:15px; } .center { text-align:center; }
+.bubble { background:#f5e9db; border-radius:16px; padding:12px; margin:10px 0; } .mine { background:#eadcf1; margin-left:15%; } .audio { background:#fcebd2; padding:10px; border-radius:12px; margin:10px 0; overflow-wrap:anywhere; } .audio span { color:var(--accent); }
+textarea,input[type=search] { width:100%; border:1px solid var(--line); background:#fffdfa; border-radius:10px; padding:10px; } textarea { resize:vertical; } input[type=file] { max-width:100%; } blockquote { margin:10px 0; padding:12px; background:#fcebd2; border-radius:12px; }
+nav { position:sticky; bottom:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); background:#fffaf4; border-top:1px solid var(--line); padding:6px 4px max(6px,env(safe-area-inset-bottom)); } nav a { text-align:center; color:var(--ink); text-decoration:none; font-size:12px; padding:5px 0; border-radius:10px; } nav a span { display:block; font-size:23px; } nav a.active { background:#fcebd2; color:var(--accent); }
+.page-links { display:flex; justify-content:space-between; gap:8px; font-size:12px; margin:16px 0; } .page-links a { color:var(--ink); }
